@@ -24,11 +24,23 @@ pipeline {
                 bat 'mvn package'
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                bat 'docker build -t java-addition:latest .'
+            }
+        }
+
+        stage('Docker Run') {
+            steps {
+                bat 'docker run --rm java-addition:latest'
+            }
+        }
     }
 
     post {
         success {
-            echo 'Java Addition pipeline completed successfully!'
+            echo 'Java Addition pipeline with Docker completed successfully!'
         }
         failure {
             echo 'Pipeline failed. Check the console output.'
