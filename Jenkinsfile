@@ -25,17 +25,19 @@ pipeline {
             }
         }
 
-        stage('Docker Build') {
-            steps {
-                bat 'docker build -t java-addition:latest .'
-            }
-        }
+        
+stage('Docker Build') {
+    steps {
+        bat '"C:\\Users\\iamth\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe" build -t java-addition:latest .'
+    }
+}
 
-        stage('Docker Run') {
-            steps {
-                bat 'docker run --rm java-addition:latest'
-            }
-        }
+stage('Docker Run') {
+    steps {
+        bat '"C:\\Users\\iamth\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe" run --rm java-addition:latest'
+    }
+}
+
     }
 
     post {
