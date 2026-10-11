@@ -5,6 +5,6 @@ public class Addition {
     }
 
     public static void main(String[] args) {
-        System.out.println("Sum = " + add(10, 20));
+        System.out.println("Java DevOps Pipeline Working!");
     }
 }
