@@ -25,7 +25,14 @@ pipeline {
             }
         }
 
-        
+
+stage('Check Docker Access') {
+    steps {
+        bat 'whoami'
+        bat 'dir "C:\\Users\\iamth\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe"'
+    }
+}
+      
 stage('Docker Build') {
     steps {
         bat '"C:\\Users\\iamth\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe" build -t java-addition:latest .'
