@@ -29,19 +29,19 @@ pipeline {
 stage('Check Docker Access') {
     steps {
         bat 'whoami'
-        bat 'dir "C:\\Users\\iamth\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe"'
+        bat 'dir "C:\\Users\\iamth\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe"'
     }
 }
       
 stage('Docker Build') {
     steps {
-        bat '"C:\\Users\\iamth\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe" build -t java-addition:latest .'
+        bat '"C:\\Users\\iamth\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" build -t java-addition:latest .'
     }
 }
 
 stage('Docker Run') {
     steps {
-        bat '"C:\\Users\\iamth\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe" run --rm java-addition:latest'
+        bat '"C:\\Users\\iamth\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" run --rm java-addition:latest'
     }
 }
 
