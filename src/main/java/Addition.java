@@ -5,6 +5,6 @@ public class Addition {
     }
 
     public static void main(String[] args) {
-        System.out.println("Java DevOps Pipeline Working!");
+        System.out.println("Trigger working !");
     }
 }
