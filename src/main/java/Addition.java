@@ -5,6 +5,6 @@ public class Addition {
     }
 
     public static void main(String[] args) {
-        System.out.println("Trigger trial !");
+        System.out.println("Trigger change !");
     }
 }
